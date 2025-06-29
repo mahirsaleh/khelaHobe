@@ -19,7 +19,12 @@ const historyThunder = () => {
                 (error) => {
                     p.innerText = error.message.replaceAll(/user/ig, 'You') ;
                     console.log(clearWatchId, 'error') ;
-                },    
+                },
+                {
+                    enableHighAccuracy: true,
+                    timeout: 5000,
+                    maximumAge: 0
+                }    
             ) ;
         } 
         else {
